@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc -S $CFILE >> c | tr '.c' '.s'#!/bin/bash
+gcc -S $CFILE >> c | tr '.c' '.s'
