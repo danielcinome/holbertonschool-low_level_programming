@@ -12,23 +12,18 @@ int print_sign(int n)
 	if (n > 48)
 	{
 	_putchar('+');
-	_putchar(',');
-	_putchar(' ');
 	val = 1;
 	}
 	else if (n == 0)
 	{
 	_putchar('0');
-	_putchar(',');
-	_putchar(' ');
 	val = 0;
 	}
 	else
 	{
 	_putchar('-');
-	_putchar(',');
-	_putchar(' ');
-	val = 1;
+	val = -1;
 	}
 	return (val);
+	_putchar('\n');
 }
