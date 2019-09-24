@@ -5,7 +5,7 @@
  * @j: number.
  * Return: Always 0.
  */
-int print_last_digit(int j) 
+int print_last_digit(int j)
 {
 	j = abs(j);
 	j = j % 10;
