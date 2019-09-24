@@ -1,18 +1,21 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _isalpha - check the code for Holberton School students.
+ * @c: varable, return value a
+ * Return: 0 || 1..
  */
 int _isalpha(int c)
 {
+	int a = 0;
+
 	if (c >= 65)
 	{
-	return (1);
+	a = 1;
 	}
 	else
 	{
-	return (0);
+	a = 0;
 	}
+	return (a);
 }
