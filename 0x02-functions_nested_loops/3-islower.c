@@ -2,20 +2,21 @@
 #include <ctype.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _islower -  int c check the code for Holberton School students.
+ * @c: variable return value.
+ * Return: 1 || 0.
  */
 int _islower(int c)
 {
+	int a = 0;
 
 	if (c > 97)
 	{
-	return (1);
+	a = 1;
 	}
 	else
 	{
-	return (0);
+	a = 0;
 	}
-	
+	return (a);
 }
