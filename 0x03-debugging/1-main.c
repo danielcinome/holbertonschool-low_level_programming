@@ -2,7 +2,7 @@
 
 /**
 * main - causes an infinite loop
-* Return: 0 @i the variable does not increase  (i++)
+* Return: 0
 */
 
 int main(void)
@@ -15,7 +15,7 @@ int main(void)
 
 	while (i < 10)
 	{
-		putchar(i);
+		putchar(i); /*@i the variable does not increase  (i++)*/
 	}
 
 	printf("Infinite loop avoided! \\o/\n");
