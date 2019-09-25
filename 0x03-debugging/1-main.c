@@ -2,8 +2,7 @@
 
 /**
 * main - causes an infinite loop
-* @i : the variable does not increase  (i++)
-* Return: 0
+* Return: 0 @i the variable does not increase  (i++)
 */
 
 int main(void)
