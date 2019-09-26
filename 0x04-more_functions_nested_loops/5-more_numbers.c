@@ -19,8 +19,8 @@ void more_numbers(void)
 				cal = num1 / 10;
 			if (num1 >= 10)
 				_putchar ('0' + cal);
-			 cal = num1 % 10;
-                        _putchar ('0' + cal);
+				cal = num1 % 10;
+				_putchar ('0' + cal);
 		}
 		_putchar('\n');
 	}
