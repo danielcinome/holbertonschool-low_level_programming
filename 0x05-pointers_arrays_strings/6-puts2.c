@@ -12,7 +12,7 @@ void puts2(char *str)
 	while(*str != 0)
 	{
         val = *str;
-	if (val % 2)
+	if (val % 2 == 0)
         _putchar(val);
 	str++;
 	}
