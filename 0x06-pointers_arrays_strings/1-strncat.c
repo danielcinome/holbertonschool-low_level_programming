@@ -2,9 +2,9 @@
 
 /**
 * *_strncat - function
-* @ dets : pointer.
-* @ src : pointer.
-* @ n : val most bytes
+* @dest: pointe
+* @src: pointer
+* @n: val most bytes
 * Return: value
 */
 
@@ -14,6 +14,7 @@ char *_strncat(char *dest, char *src, int n)
 	int val;
 
 	pos = dest;
+
 	while (*dest != '\0')
 	{
 		dest++;
@@ -21,7 +22,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (val != n)
 	{
-		*dest = * dest + *src;
+		*dest = *dest + *src;
 		dest++;
 		src++;
 		val++;
