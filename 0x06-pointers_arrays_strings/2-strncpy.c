@@ -23,10 +23,11 @@ char *_strncpy(char *dest, char *src, int n)
 		src++;
 		f++;
 	}
-	while (*src < n)
+	while (*dest < n)
 	{
-		src++;
 	*dest = '\0';
+	src++;
+	dest++;
 	}
 	src = pos_s;
 	dest = pos_d;
