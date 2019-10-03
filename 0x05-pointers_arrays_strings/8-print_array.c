@@ -15,12 +15,12 @@ void print_array(int *a, int n)
 	while (c < n)
 	{
 	val = *a;
-	printf ("%d", val);
+	printf("%d", val);
 	if (c < n - 1)
-	printf (",");
-	printf (" ");
+	printf(",");
+	printf(" ");
 	a++;
 	c++;
 	}
-	printf ("\n");
+	printf("\n");
 }
