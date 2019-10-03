@@ -19,11 +19,16 @@ char *_strncpy(char *dest, char *src, int n)
 	while (f < n && *src != '\0')
 	{
 		*dest = *src;
-		*dest++ = *src++;
+		dest++;
+		src++;
 		f++;
 	}
+	while (*src < n)
+	{
+		src++;
 	*dest = '\0';
-	dest = pos_d;
+	}
 	src = pos_s;
+	dest = pos_d;
 	return (dest);
 }
