@@ -17,8 +17,10 @@ void print_array(int *a, int n)
 	val = *a;
 	printf("%d", val);
 	if (c < n - 1)
+	{
 	printf(",");
 	printf(" ");
+	}
 	a++;
 	c++;
 	}
