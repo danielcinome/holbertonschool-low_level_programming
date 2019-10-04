@@ -2,7 +2,7 @@
 
 /**
 * *string_toupper - changes
-* @*: pointer
+* @n: pointer
 * Return: val
 */
 
