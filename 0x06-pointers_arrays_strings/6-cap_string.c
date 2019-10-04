@@ -10,6 +10,9 @@ char *cap_string(char *n)
 {
 	int c = 0;
 
+	if (n[c] >= 97 && n[c] <= 122)
+		n[c] = n[c] - 32;
+
 	while (n[c] != 0)
 	{
 		if (n[c] == '\t')
