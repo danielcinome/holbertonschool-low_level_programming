@@ -15,8 +15,6 @@ char *cap_string(char *n)
 
 	while (n[c] != 0)
 	{
-		if (n[c] == '\t')
-			n[c] = 32;
 
 		if ((n[c] == 32 || n[c] == 44) || (n[c] == 59 || n[c] == 46)
 		|| (n[c] == 33 || n[c] == 63) || (n[c] == 34 || n[c] == 40)
