@@ -19,14 +19,10 @@ char *leet(char *n)
 		while (letter[il] != '\0')
 		{
 			if (n[i] == letter[il])
-			{
 				n[i] = number[il];
-			}
-			else
-			{
+
 				il++;
 				in++;
-			}
 		}
 	i++;
 	il = 0;
