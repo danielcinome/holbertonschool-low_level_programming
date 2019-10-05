@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
-* *leet - function replace letter by number
+* *leet- function replace letter by number
 * @n : pointer
-* Return : val 
+* Return: val
 */
 
 char *leet(char *n)
