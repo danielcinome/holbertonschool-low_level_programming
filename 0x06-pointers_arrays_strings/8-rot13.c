@@ -8,8 +8,8 @@
 
 char *rot13(char *n)
 {
-	char al[] = {"aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ"};
-	char rt[] = {"nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM"};
+	char al[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char rt[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 	int i = 0;
 	int a = 0;
 
@@ -19,7 +19,10 @@ char *rot13(char *n)
 		while (al[a] != '\0')
 		{
 			if (n[i] == al[a])
+			{
 				n[i] = rt[a];
+				break;
+			}
 
 			a++;
 		}
