@@ -13,11 +13,12 @@ void print_number(int n)
 	if (n < 100)
 	{
 		mo = n  % 10;
-		di = n / 10;
 		di = n / 100;
+		if (n < 0)
 		_putchar (di);
 		di = n / 10;
-		di = di % 10;
+		di = di  % 10;
+		if (n > 0)
 		_putchar ('0' + di);
 		_putchar ('0' + mo);
 	}
