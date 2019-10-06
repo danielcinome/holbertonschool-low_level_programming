@@ -18,7 +18,7 @@ void print_number(int n)
 		_putchar (di);
 		di = n / 10;
 		di = di  % 10;
-		if (n > 0)
+		if (n >= 10)
 		_putchar ('0' + di);
 		_putchar ('0' + mo);
 	}
