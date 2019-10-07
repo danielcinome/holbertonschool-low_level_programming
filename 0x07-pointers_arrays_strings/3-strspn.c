@@ -19,7 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 		while (s[b] == accept[c])
 		{
 			c++;
-			if(s[b] == accept[c])
+			if (s[b] == accept[c])
 			a++;
 		}
 		a++;
