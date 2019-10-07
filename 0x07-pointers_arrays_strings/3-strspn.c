@@ -14,15 +14,23 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (s[b] != '\0')
 	{
-		if (s[b] == ',' || s[b] == ' ')
-		break;
-		while (s[b] == accept[c])
+		while (accept[c] != '\0')
 		{
-			c++;
 			if (s[b] == accept[c])
-			a++;
+			{
+				a++;
+				break;
+			}
+			else
+			{
+				c++;
+			}
 		}
-		a++;
+
+		if (s[b] != accept[c])
+		break;
+
+		c = 0;
 		b++;
 	}
 	return (a);
