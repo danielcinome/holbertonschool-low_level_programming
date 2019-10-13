@@ -15,8 +15,13 @@ int main(int argc, char *argv[])
 	{
 		for (c = 1 ; c < argc ; c++)
 		{
-			if ((atoi(argv[c])) >= 0)
+			if ((atoi(argv[c])))
 			{
+				if ((atoi(argv[c])) >= 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
 				res += (atoi(argv[c]));
 			}
 			else
