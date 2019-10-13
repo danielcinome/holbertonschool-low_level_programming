@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int multi(int val);
+
 /**
 * main - prints the number of arguments passed into it.
 * @argc : t argumento
@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int res;
 
-	if (argc >= 3)
+	if (argc >= 2)
 	{
 		res = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", res);
