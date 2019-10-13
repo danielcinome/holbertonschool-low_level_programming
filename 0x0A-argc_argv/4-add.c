@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int res = 0, c;
 
-	if (argc >= 2)
+	if (argc >= 3)
 	{
 		for (c = 1 ; c < argc ; c++)
 		{
