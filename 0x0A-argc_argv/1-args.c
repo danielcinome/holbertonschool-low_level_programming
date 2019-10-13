@@ -10,7 +10,14 @@
 
 int main(int argc, __attribute__((unused)) char *argv[])
 {
-	printf("%d\n", argc);
+	int c = 0;
+
+	for (; c < argc ; c++)
+	{
+	}
+
+	c--;
+	printf("%d\n", c);
 
 	return (0);
 }
