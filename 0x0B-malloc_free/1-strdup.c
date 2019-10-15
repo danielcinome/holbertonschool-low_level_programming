@@ -11,10 +11,13 @@ char *_strdup(char *str)
 {
 	char *cop;
 	int c;
+	
+	if (str == NULL)
+		return (NULL);
 
 	cop = malloc(*str);
 
-	if (str == NULL)
+	if (cop == NULL)
 		return (NULL);
 
 	for (c = 0 ; str[c] != '\0' ; c++)
