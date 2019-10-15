@@ -15,7 +15,10 @@ char *create_array(unsigned int size, char c)
 
 	val = malloc(sizeof(*val) * size);
 
-	if (val == 0 || val == NULL)
+	if (val == 0)
+		return (0);
+
+	if (val == NULL)
 		return ('\0');
 
 	for (i = 0 ; i < size ; i++)
