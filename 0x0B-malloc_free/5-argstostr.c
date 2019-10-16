@@ -23,8 +23,9 @@ char *argstostr(int ac, char **av)
 		{
 			str++;
 		}
+	str++;
 	}
-
+	
 
 	d = malloc(sizeof(int) * str);
 
@@ -43,4 +44,3 @@ char *argstostr(int ac, char **av)
 	}
 	return (d);
 }
-
