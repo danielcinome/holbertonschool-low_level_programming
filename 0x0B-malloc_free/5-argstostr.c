@@ -4,14 +4,15 @@
 /**
 * *argstostr - function that concatenates all the arguments of your program.
 * @ac : argument of counter
-* @av : argument of vector
+;* @av : argument of vector
 * Return: pointer
 */
 
 char *argstostr(int ac, char **av)
 {
-	int c, c1, a = 0;
-	int str;
+	int c, c1;
+	int a = 0;
+	int str = 0;
 	char *d;
 
 	if (ac == 0 || av == NULL)
@@ -39,8 +40,7 @@ char *argstostr(int ac, char **av)
 			a++;
 		}
 		d[a] = '\n';
-		a++;
+		a++;		
 	}
-	d[a] = '\0';
 	return (d);
 }
