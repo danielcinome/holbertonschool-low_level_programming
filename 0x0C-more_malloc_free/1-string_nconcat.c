@@ -42,14 +42,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= b)
 		for (i = 0 ; s2[i] != '\0' ; i++)
 		{
-			d[j] = s2[i];
-			j++;
+			d[i] = s2[i];
 		}
-	for (i = 0 ; s2[i] != s2[n] ; i++)
+	for (j = 0 ; s2[j] != s2[n] ; j++)
 	{
-		d[j] = s2[i];
-		j++;
+		d[i] = s2[j];
+		i++;
 	}
-	d[j] = '\0';
+	d[i] = '\0';
 	return (d);
 }
