@@ -11,14 +11,13 @@ char *_strncpy(char *dest, char *src, int n);
 */
 int _strlen(char *s)
 {
-	int val = 0;
+	int i = 0;
 
-	while (*s != 0)
+	while (s[i] != 0)
 	{
-		s++;
-		val++;
+		i++;
 	}
-	return (val);
+	return (i);
 }
 /**
 * *_strncpy - function that copies a string.
