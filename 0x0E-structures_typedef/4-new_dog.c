@@ -2,20 +2,29 @@
 #include <stdlib.h>
 
 /**
+* *_strncpy - function that copies a string.
+* @dest: pointer
+* @src: pointer
+* @n: variable
+* Return: dest
+*/
+/**
 * _strlen - returns the length of a string.
 * @s : pointers
 * Return: val.
 */
+
 int _strlen(char *s)
 {
-	int i = 0;
+	int val = 0;
 
-	while (s[i] != '\0')
+	while (s[val] != 0)
 	{
-		i++;
+		val++;
 	}
-	return (i);
+	return (val);
 }
+
 /**
 * *_strncpy - function that copies a string.
 * @dest: pointer
@@ -23,6 +32,7 @@ int _strlen(char *s)
 * @n: variable
 * Return: dest
 */
+
 char *_strncpy(char *dest, char *src, int n)
 {
 	int f = 0;
@@ -54,14 +64,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
-	d = malloc(dog_t));
+	d = malloc(sizeof(struct dog_t));
 	if (d == NULL)
 		return (NULL);
 
 	t_name = _strlen(name);
 	t_owner = _strlen(owner);
 
-	d->name = malloc(t_name + 1));
+	d->name = malloc(t_name + 1);
 	if (d->name == NULL)
 	{
 		free(d);
