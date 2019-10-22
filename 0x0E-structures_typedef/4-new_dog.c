@@ -2,13 +2,6 @@
 #include <stdlib.h>
 
 /**
-* *_strncpy - function that copies a string.
-* @dest: pointer
-* @src: pointer
-* @n: variable
-* Return: dest
-*/
-/**
 * _strlen - returns the length of a string.
 * @s : pointers
 * Return: val.
@@ -64,20 +57,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
-	d = malloc(sizeof(struct dog_t));
+	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
 
 	t_name = _strlen(name);
 	t_owner = _strlen(owner);
 
-	d->name = malloc(t_name + 1);
+	d->name = malloc(sizeof(char) * t_name + 1);
 	if (d->name == NULL)
 	{
 		free(d);
 		return (NULL);
 	}
-	d->owner = malloc(t_owner + 1);
+	d->owner = malloc(sizeof(char) * t_owner + 1);
 	if (d->owner == NULL)
 	{
 		free(d->name);
