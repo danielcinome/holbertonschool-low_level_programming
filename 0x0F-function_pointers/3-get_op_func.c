@@ -1,5 +1,12 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+/**
+* *get_op_func - pointer to function
+* @s : pointer
+* Return: ops[i]
+*/
 
 int (*get_op_func(char *s))(int, int)
 {
@@ -11,12 +18,12 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
 	while (s != ops[i].op)
 	{
-		if (s == ops[i].op)
-			return (ops[i].(f));
+		if (*s == *(ops[i].op))
+			return (ops[i].f);
 		i++;
 	}
 	return (NULL);
