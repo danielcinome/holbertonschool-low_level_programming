@@ -4,9 +4,8 @@
 
 /**
 * print_numbers - function that prints numbers, followed by a new line.
-* @separator : String 
+* @separator : String
 * @n : number of arguments
-* Return: 
 */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
