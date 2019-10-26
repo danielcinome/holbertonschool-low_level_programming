@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	int i = 0, a = 0;
 	char *str;
 
-	while (format[i] && format)
+	while (format && format[i])
 	{
 	va_start(p, format);
 	while (format[i])
