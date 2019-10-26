@@ -16,9 +16,9 @@ void print_all(const char * const format, ...)
 	while (format[i] && format)
 	{
 	va_start(p, format);
-	while (format[i] && format)
+	while (format[i])
 	{
-		switch (format[i])
+		switch (format[i++])
 		{
 
 		case 'c':
