@@ -11,18 +11,20 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp, *aux;
+	listint_t *temp;
+	listint_t *aux;
 	unsigned int i;
 
 	temp = *head;
-	for (i = 0 ; i < index ; i++)
+	for (i = 0 ; i < index - 1 ; i++)
 	{
 		if (temp == NULL)
 			return (-1);
 		temp = temp->next;
-		printf("posicion de index -1 es :%d\n", i);
 	}
-	aux->next = temp->next;
-	free(temp);
+	aux = temp;
+	aux = aux->next;
+	temp->next = aux->next;
+	free(aux);
 	return (1);
 }
