@@ -1,24 +1,6 @@
 #include "holberton.h"
 
 /**
-* con - funtion cont
-* @num : number
-* Return: counter
-*/
-
-int con(int num)
-{
-	int cont  = 0;
-
-	while (num)
-	{
-	cont += num & 1;
-	num >>= 1;
-	}
-	return (cont);
-}
-
-/**
 * flip_bits - bits you would need to flip to get from one nm to another.
 * @n : number
 * @m : number
@@ -27,8 +9,13 @@ int con(int num)
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int val = 0;
+	unsigned int val = 0, cont = 0;
 
-	val = con(n ^ m);
-	return (val);
+	val = n ^ m;
+	while (val)
+	{
+		cont += val & 1;
+		val >>= 1;
+	}
+	return (cont);
 }
