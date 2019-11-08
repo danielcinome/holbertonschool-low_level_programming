@@ -29,8 +29,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int val = 0;
 
-	if (n == '\0' || m == '\0')
-		return ('\0');
 	val = con(n ^ m);
 	return (val);
 }
