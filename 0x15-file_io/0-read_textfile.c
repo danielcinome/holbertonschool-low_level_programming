@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+#include <stdlib.h>
 #include <fcntl.h>
 
 #include <sys/types.h>
@@ -14,9 +14,13 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t num;
-	int str, i;
-	char buf[1024];
+	ssize_t num = 0, num2 = 0;
+	int str;
+	char *buf;
+
+	buf = malloc(letters);
+	if (buf == NULL)
+		return (0);
 
 	if (filename == NULL)
 		return (0);
@@ -30,11 +34,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (num == -1)
 		return (0);
 
-	for (i = 0 ; i < num ; i++)
-	{
-		putchar(buf[i]);
-	}
-
 	close(str);
-	return (num);
+	num2 = write(STDOUT_FILENO, buf, num);
+	if (num2 == -1)
+		return (0);
+
+	return (num2);
 }
