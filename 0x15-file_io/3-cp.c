@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	cwd = close(wd);
 	if (cwd == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", wd),
-		exit(100); 
+		exit(100);
 	crd = close(rd);
 	if (crd == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", rd),
