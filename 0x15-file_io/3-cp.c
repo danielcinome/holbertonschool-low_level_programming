@@ -30,13 +30,14 @@ int main(int argc, char *argv[])
 	S_IROTH | S_IWOTH;
 	wd = open(argv[2], O_CREAT | O_WRONLY, perm);
 	if (wd == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]),
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
+
 		exit(99);
 
 	while ((val = read(rd, buf, 1024)) > 0)
 	{
 		if (write(wd, buf, val) != val)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]),
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
 			exit(99);
 	}
 	if (val == -1)
