@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP |
 	S_IROTH | S_IWOTH;
-	wd = open(argv[2], O_CREAT | O_WRONLY, perm);
+	wd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, perm);
 	if (wd == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
 
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	cwd = close(wd);
 	crd = close(rd);
 	if (cwd == -1 || crd == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", rd),
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", wd),
 		exit(100);
 	return (0);
 }
