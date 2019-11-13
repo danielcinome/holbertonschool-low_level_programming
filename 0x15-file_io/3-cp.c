@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
 		exit(98);
 	perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP |
-	S_IROTH | S_IWOTH;
+	S_IROTH;
 	wd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, perm);
 	if (wd == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
