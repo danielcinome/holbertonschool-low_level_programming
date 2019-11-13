@@ -6,6 +6,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+#ifndef BUF_SIZE
+#define BUF_SIZE 1024
+#endif
 /**
 * main - copies the content of a file to another file.
 * @argc : counter of arguments
@@ -17,7 +20,7 @@ int main(int argc, char *argv[])
 {
 	int wd, rd, val = 0, cwd, crd;
 	mode_t perm;
-	char buf[1024];
+	char buf[BUF_SIZE];
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "copies the content of a file to another file.\n"),
@@ -34,7 +37,7 @@ int main(int argc, char *argv[])
 
 		exit(99);
 
-	while ((val = read(rd, buf, 1024)) > 0)
+	while ((val = read(rd, buf, BUF_SIZE)) > 0)
 	{
 		if (write(wd, buf, val) != val)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
