@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	char buf[1024];
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "copies the content of a file to another file.\n"),
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"),
 		exit(97);
 	rd = open(argv[1], O_RDONLY);
 	if (rd == -1)
