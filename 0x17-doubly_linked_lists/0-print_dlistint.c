@@ -25,6 +25,7 @@ size_t print_dlistint(const dlistint_t *h)
 	}
 	else
 	{
+		a = h->n;
 		printf("%lu\n", a);
 		i++;
 	}
