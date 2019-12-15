@@ -6,9 +6,9 @@
  * Return: number of elements
  */
 
-size_t dlistint_len(const dlistint_t *h)
+unsigned int dlistint_len(const dlistint_t *h)
 {
-	size_t i = 0;
+	unsigned int i = 0;
 
 	if (h == NULL)
 		return (0);
@@ -34,8 +34,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new;
 	dlistint_t *temp;
-	unsigned int i;
-	size_t num_node = 0;
+	unsigned int i,  num_node = 0;
 
 	if (h == NULL || (*h == NULL && idx > 0))
 		return (NULL);
