@@ -6,9 +6,9 @@
  * Return: number of elements
  */
 
-unsigned int dlistint_len(const dlistint_t *h)
+unsigned int len(const dlistint_t *h)
 {
-	unsigned int i = 0;
+	 int i = 0;
 
 	if (h == NULL)
 		return (0);
@@ -34,7 +34,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new;
 	dlistint_t *temp;
-	unsigned int i,  num_node = 0;
+	unsigned int i = 0,  num_node = 0;
 
 	if (h == NULL || (*h == NULL && idx > 0))
 		return (NULL);
@@ -45,7 +45,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = add_dnodeint(&temp, n);
 		return (*h);
 	}
-	num_node = dlistint_len(temp);
+	num_node = len(temp);
 	if (idx > (num_node - 1))
 	{
 		return (NULL);
@@ -60,9 +60,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		new = malloc(sizeof(dlistint_t));
 		if (new == NULL)
 			return (NULL);
-		for (i = 0 ; i < idx ; i++)
+		while (i != idx)
 		{
 			temp = temp->next;
+			i++;
 		}
 		new->n = n;
 		temp->prev->next = new;
