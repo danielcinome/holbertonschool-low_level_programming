@@ -1,14 +1,14 @@
 #include "lists.h"
 
 /**
- * dlistint_len - function that returns the number of elements in a linked
+ * len - function that returns the number of elements in a linked
  * @h : head
  * Return: number of elements
  */
 
 unsigned int len(const dlistint_t *h)
 {
-	 int i = 0;
+	unsigned int i = 0;
 
 	if (h == NULL)
 		return (0);
