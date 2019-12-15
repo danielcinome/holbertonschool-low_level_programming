@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
 /**
 * delete_dnodeint_at_index - delete_dnodeint_at_index
 * @index : is the index of the node that should be deleted. Index starts at 0
@@ -9,19 +8,20 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *ant;
-	dlistint_t *des;
-	dlistint_t *temp;
+	dlistint_t *ant, *des, *temp;
 	unsigned int i;
 
 	ant = *head;
 	if (head == NULL)
 		return (-1);
 	temp = *head;
-	if (temp == NULL || temp->next == NULL)
+	if (temp == NULL || (temp->next == NULL && index == 0))
 	{
-		free(*head);
-		*head = NULL;
+		if (temp != NULL)
+		{
+			free(*head), *head = NULL;
+			return (1);
+		}
 		return (-1);
 	}
 	if (index == 0)
@@ -46,6 +46,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			else
 				ant->next = NULL;
 			free(temp);
-		}
+	}
 	return (1);
 }
