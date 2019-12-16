@@ -1,6 +1,5 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-#define EXIT_SUCCESS
 #include <stdlib.h>
 
 int _putchar(char c);
