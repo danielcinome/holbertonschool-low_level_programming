@@ -12,6 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 	int state = 0;
 
 	if (ht != NULL)
+	{
 		printf("{");
 		while (i <= 1024)
 		{
@@ -31,5 +32,6 @@ void hash_table_print(const hash_table_t *ht)
 			}
 			i++;
 		}
+	}
 	printf("}\n");
 }
