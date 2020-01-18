@@ -36,14 +36,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int val_index = 0;
 
-	if (ht == NULL)
-		return (0);
-	if (key == NULL)
-		return (0);
-	if (value == NULL)
+	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
 	val_index = key_index((unsigned char *)key, ht->size);
+
+	if (ht->array[val_index] != NULL &&
+			strcmp(ht->array[val_index]->key, key) == 0)
+		ht->array[val_index]->key = strdup(value);
+
 	ht->array[val_index] = add_node(&ht->array[val_index], key, value);
 	if (ht->array[val_index] == NULL)
 		return (0);
