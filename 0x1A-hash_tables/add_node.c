@@ -3,7 +3,8 @@
 /**
 * add_node - function that adds a new node
 * @head: pointer double
-* @str: data add
+* @key : is the key
+* @value : value
 * Return: the address of the new element, or NULL if it failed
 */
 
