@@ -43,8 +43,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht->array[val_index] != NULL &&
 			strcmp(ht->array[val_index]->key, key) == 0)
-		ht->array[val_index]->key = strdup(value);
-
+	{
+		free(ht->array[val_index]->value);
+		ht->array[val_index]->value = strdup(value);
+		return (1);
+	}
 	ht->array[val_index] = add_node(&ht->array[val_index], key, value);
 	if (ht->array[val_index] == NULL)
 		return (0);
