@@ -8,13 +8,13 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *temp;
-	int i = 0;
+	unsigned int i = 0;
 	int state = 0;
 
 	if (ht != NULL)
 	{
 		printf("{");
-		while (i <= 1024)
+		while (i <= ht->size)
 		{
 			if (ht->array[i] != NULL)
 			{
