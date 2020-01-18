@@ -21,5 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	val_index = key_index((unsigned char *)key, ht->size);
 	ht->array[val_index] = add_node(&ht->array[val_index], key, value);
+	if (ht->array[val_index] == NULL)
+		return (0);
 	return (1);
 }
