@@ -2,7 +2,7 @@ CC = gcc
 SRC = main.c holberton.c
 NAME = holberton
 OBJ = $(patsubst %.c, %.o, $(SRC))
-RM = $(oclone)
+RM = $(oclean)
 
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
@@ -16,5 +16,5 @@ oclean:
 fclean:
 	rm -f *~ $(NAME) $(OBJ)
 
-re:
-	rm -f $(OBJ) $(NAME)
+re: $(OBJ)
+	rm -f $(OBJ)
