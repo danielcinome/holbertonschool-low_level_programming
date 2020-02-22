@@ -3,6 +3,8 @@ SRC = main.c holberton.c
 NAME = holberton
 OBJ = $(patsubst %.c, %.o, $(SRC))
 CFLAGS = -g
+RM: 
+	rm -f
 
 all : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
