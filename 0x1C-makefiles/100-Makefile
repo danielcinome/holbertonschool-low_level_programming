@@ -10,7 +10,7 @@ all : $(OBJ) m.h
 .PHONY: clean oclean fclean re
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
