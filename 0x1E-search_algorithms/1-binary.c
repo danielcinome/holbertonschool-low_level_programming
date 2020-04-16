@@ -11,7 +11,7 @@ void print(int *array, int left, int right)
 {
 	int i;
 
-	printf("Searching in array:Searching in array: ");
+	printf("Searching in array: ");
 	for (i = left ; i <= right ; i++)
 	{
 		if (i + 1 <= right)
